@@ -1,12 +1,21 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom";
 import "./styles.css";
 import ScotchInfoBar from "./ScotchInfoBar";
 
 function App() {
   // MOST OF YOUR CODE GOES HERE
-  const [name, setName] = useState("Richard");
-  const [age, setAge] = useState("36");
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  //set default values for empty state
+  useEffect(() => {
+    if (name === "") {
+      setName("Richard");
+    }
+    if (age === "") {
+      setAge("36");
+    }
+  });
   return (
     <div className="App">
       <div>
