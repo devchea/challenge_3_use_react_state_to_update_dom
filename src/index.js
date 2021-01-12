@@ -24,7 +24,12 @@ function App() {
         {/* Input name */}
         <div className="field">
           <label className="label">Name: </label>
-          <input className="input" type="text" placeholder="William" />
+          <input
+            className="input"
+            type="text"
+            placeholder="William"
+            onChange={(e) => setName(e.target.value)}
+          />
         </div>
 
         {/* Input age */}
