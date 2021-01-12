@@ -35,7 +35,12 @@ function App() {
         {/* Input age */}
         <div className="field">
           <label className="label">Age: </label>
-          <input className="input" type="number" placeholder="38" />
+          <input
+            className="input"
+            type="number"
+            placeholder="38"
+            onChange={(e) => setAge(e.target.value)}
+          />
         </div>
       </div>
       <ScotchInfoBar seriesNumber="3" />
